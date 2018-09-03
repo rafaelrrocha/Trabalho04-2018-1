@@ -7,59 +7,28 @@
     android:background="#9a9a9a"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="Tabela FIPE"
-        android:textColor="#f8e80e"
-        android:textSize="36sp"
-        android:textStyle="bold" />
-
-    <ImageButton
-        android:id="@+id/motoButtonId"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="140dp"
-        android:layout_height="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="160dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/moto" />
-
-    <ImageButton
+    <Button
         android:id="@+id/carroButtonId"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="140dp"
-        android:layout_height="90dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/redcar" />
-
-    <ImageButton
-        android:id="@+id/caminhaoButtonId"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="140dp"
-        android:layout_height="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/caminhao" />
-
-    <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="91dp"
-        android:text="Escolha um:"
-        android:textSize="36sp" />
+        android:layout_marginTop="120dp"
+        android:text="Carro" />
 
+    <Button
+        android:id="@+id/motoButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Moto" />
+
+    <Button
+        android:id="@+id/caminhaoButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp"
+        android:text="Veículo" />
 </RelativeLayout>

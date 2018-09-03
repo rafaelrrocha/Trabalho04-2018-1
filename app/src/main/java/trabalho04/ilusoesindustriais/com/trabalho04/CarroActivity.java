@@ -4,10 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CarroActivity extends AppCompatActivity {
 
     private ListView listaMarcasCarros;
+    private TextView textoResultado;
+    private Retrofit retrofit;
     private String[] marcasCarros = {
             "AM Gen", "ASTON MARTIN", "Acura", "Agrale", "Alfa Romeo", "Asia Motors", "Audi",
             "BMW", "BRM", "Baby", "Bugre", "CBT Jipe", "CHANA", "CHANGAN", "CHERY", "Cadillac",
@@ -22,10 +28,19 @@ public class CarroActivity extends AppCompatActivity {
             "Suzuki", "TAC", "Toyota", "Troller", "VW - VolksWagen", "Volvo", "Wake", "Walk", "smart"
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carro);
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://parallelum.com.br/fipe/api/v1")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+
+
 
         listaMarcasCarros = findViewById(R.id.listViewCarrosId);
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(

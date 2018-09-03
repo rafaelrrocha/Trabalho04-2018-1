@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -19,9 +20,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
 
-    private ImageButton carroButton;
-    private ImageButton motoButton;
-    private ImageButton caminhaoButton;
+    private Button carroButton;
+    private Button motoButton;
+    private Button caminhaoButton;
 
 
     @Override
@@ -29,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // carroButton = findViewById(R.id.carroButtonId);
-       // motoButton = findViewById(R.id.motoButtonId);
-      //  caminhaoButton = findViewById(R.id.caminhaoButtonId);
+        carroButton = findViewById(R.id.carroButtonId);
+        motoButton = findViewById(R.id.motoButtonId);
+        caminhaoButton = findViewById(R.id.caminhaoButtonId);
 
         carroButton.setOnClickListener(new View.OnClickListener() {
             @Override
