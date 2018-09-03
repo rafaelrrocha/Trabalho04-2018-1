@@ -1,0 +1,23 @@
+package trabalho04.ilusoesindustriais.com.trabalho04.Model;
+
+public class Marca {
+
+    private String nome;
+    private String codigo;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+}
